@@ -8,6 +8,7 @@ import LiquidEther from "./components/LiquidEther"
 import PillNav from "./components/PillNav"
 import ScrollFloat from "./components/ScrollFloat"
 import ScrollReveal from "./components/ScrollReveal"
+import StarBorder from "./components/StarBorder"
 
 function App() {
   return (
@@ -41,14 +42,56 @@ function App() {
         pillTextColor="#291C0E"
       />
 
-      <main style={{ position: "relative", zIndex: 10, width: "100%" }}>
-        <section id="home" className="home-section">
-          <div className="home-text">
-            <p className="home-kicker">HELLO!</p>
+      <main
+        style={{
+          position: "relative",
+          zIndex: 10,
+          width: "100%",
+          color: "#804012"
+        }}
+      >
+        <section
+          id="home"
+          style={{
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "0 80px"
+          }}
+        >
+          <div style={{ maxWidth: "520px", textAlign: "left" }}>
+            <p
+              style={{
+                color: "#DB9F75",
+                fontSize: "14px",
+                letterSpacing: "2px",
+                marginBottom: "12px",
+                fontWeight: "bold"
+              }}
+            >
+              HELLO!
+            </p>
 
-            <h1>I'm Nadia</h1>
+            <h1
+              style={{
+                fontSize: "64px",
+                lineHeight: "1",
+                marginBottom: "18px",
+                color: "#804012"
+              }}
+            >
+              I'm Nadia
+            </h1>
 
-            <p className="home-description">
+            <p
+              style={{
+                fontSize: "20px",
+                lineHeight: "1.5",
+                marginBottom: "28px",
+                color: "#804012"
+              }}
+            >
               Building modern web experiences with code and creativity.
             </p>
 
@@ -56,27 +99,56 @@ function App() {
               href="https://wa.me/393513880327?text=Hello%20Nadia,%20I%20saw%20your%20portfolio!"
               target="_blank"
               rel="noopener noreferrer"
-              className="home-button"
+              style={{
+                padding: "14px 28px",
+                borderRadius: "999px",
+                background: "#DB9F75",
+                color: "#291C0E",
+                fontWeight: "bold",
+                textDecoration: "none",
+                display: "inline-block",
+                cursor: "pointer"
+              }}
             >
               Let's talk
             </a>
           </div>
 
-          <div className="hero-photo-area">
-            <div className="hero-photo-border">
-              <div className="hero-photo-frame">
-                <img
-                  src={minhaFoto}
-                  alt="Nadia Mateus"
-                  className="hero-photo"
-                />
-              </div>
+          <StarBorder style={{ borderRadius: "50%" }}>
+            <div
+              style={{
+                width: "320px",
+                height: "320px",
+                borderRadius: "50%",
+                overflow: "hidden"
+              }}
+            >
+              <img
+                src={minhaFoto}
+                alt="Nadia"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center top"
+                }}
+              />
             </div>
-          </div>
+          </StarBorder>
         </section>
 
-        <section id="about" className="about-section">
-          <div className="about-content">
+        <section
+          id="about"
+          style={{
+            minHeight: "140vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "120px 80px",
+            color: "#803E2F"
+          }}
+        >
+          <div style={{ maxWidth: "1000px", width: "100%" }}>
             <ScrollFloat
               animationDuration={1.2}
               ease="back.inOut(2)"
@@ -87,7 +159,19 @@ function App() {
               About Me
             </ScrollFloat>
 
-            <div className="about-box">
+            <div
+              style={{
+                marginTop: "40px",
+                background: "rgba(31, 29, 32, 0.55)",
+                border: "1px solid rgba(245, 239, 231, 0.15)",
+                borderRadius: "28px",
+                padding: "40px",
+                backdropFilter: "blur(14px)",
+                lineHeight: "1.8",
+                fontSize: "18px",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.25)"
+              }}
+            >
               <ScrollReveal
                 baseOpacity={0.1}
                 enableBlur={true}
