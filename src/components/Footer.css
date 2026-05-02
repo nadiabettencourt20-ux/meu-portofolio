@@ -1,0 +1,47 @@
+.footer-section {
+  padding: 70px 80px 40px;
+  overflow: hidden;
+  color: #f5efe7;
+}
+
+.social-loop {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  animation: social-loop 18s linear infinite;
+  margin-bottom: 38px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f5efe7;
+  text-decoration: none;
+  padding: 13px 20px;
+  border-radius: 999px;
+  background: rgba(31, 29, 32, 0.78);
+  border: 1px solid rgba(219, 159, 117, 0.22);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.social-item svg {
+  color: #db9f75;
+  font-size: 20px;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #a79986;
+}
+
+@keyframes social-loop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
