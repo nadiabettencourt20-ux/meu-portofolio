@@ -115,14 +115,7 @@ function App() {
           </div>
 
           <StarBorder style={{ borderRadius: "50%" }}>
-            <div
-              style={{
-                width: "320px",
-                height: "320px",
-                borderRadius: "50%",
-                overflow: "hidden"
-              }}
-            >
+            <div>
               <img
                 src={minhaFoto}
                 alt="Nadia"
