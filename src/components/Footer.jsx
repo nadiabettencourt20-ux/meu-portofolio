@@ -1,25 +1,24 @@
-import { FiInstagram, FiLinkedin, FiGithub } from "react-icons/fi"
-import AnimatedContent from "./AnimatedContent"
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import "./Footer.css"
 
 const socials = [
   {
-    icon: <FiInstagram />,
+    icon: <FaInstagram />,
     label: "Instagram",
     href: "https://www.instagram.com/nadiamateus8"
   },
   {
-    icon: <FiLinkedin />,
+    icon: <FaLinkedin />,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/nádia-mateus-16813a258"
+    href: "https://www.linkedin.com/in/n%C3%A1dia-mateus-16813a258"
   },
   {
-    icon: <FiGithub />,
+    icon: <FaGithub />,
     label: "GitHub",
     href: "https://github.com/nadiabettencourt20-ux"
   },
   {
-    icon: "💬",
+    icon: <FaWhatsapp />,
     label: "WhatsApp",
     href: "https://wa.me/393513880327"
   }
@@ -28,28 +27,24 @@ const socials = [
 function Footer() {
   return (
     <footer className="footer-section">
-      <AnimatedContent distance={60} duration={1}>
-        
-        <div className="social-loop">
-          {[...socials, ...socials].map((item, index) => (
-            <a
-              href={item.href}
-              key={index}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-item"
-            >
-              <span className="icon">{item.icon}</span>
-              <span>{item.label}</span>
-            </a>
-          ))}
-        </div>
+      <div className="footer-socials">
+        {socials.map((item) => (
+          <a
+            href={item.href}
+            key={item.label}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-social-link"
+          >
+            {item.icon}
+            <span>{item.label}</span>
+          </a>
+        ))}
+      </div>
 
-        <p className="footer-copy">
-          © 2026 Nádia Mateus. All rights reserved.
-        </p>
-
-      </AnimatedContent>
+      <p className="footer-copy">
+        © 2026 Nádia Mateus. All rights reserved.
+      </p>
     </footer>
   )
 }
